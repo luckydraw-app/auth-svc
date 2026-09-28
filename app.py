@@ -1,6 +1,7 @@
 import os
 import jwt
 import bcrypt
+from dotenv import load_dotenv
 
 from datetime import datetime, timedelta
 
@@ -26,6 +27,8 @@ from shared.telemetry.logger import (
 )
 
 from flask import Response
+
+load_dotenv()
 
 Base.metadata.create_all(bind=engine)
 
